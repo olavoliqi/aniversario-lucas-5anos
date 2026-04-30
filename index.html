@@ -349,7 +349,8 @@
         </div>
 
         <div class="action-bar">
-            <button class="btn btn-primary" onclick="addConvidado()">➕ Adicionar Convidado</button>
+            <button class="btn btn-primary" onclick="addConvidado('Adulto')">➕ Adicionar Adulto</button>
+            <button class="btn btn-primary" onclick="addConvidado('Criança')">➕ Adicionar Criança</button>
             <button class="btn btn-success" onclick="saveChanges()">💾 Salvar Alterações</button>
             <button class="btn btn-primary" onclick="reloadData()">🔄 Atualizar</button>
         </div>
@@ -376,17 +377,39 @@
 
             <input type="text" id="search-box" class="search-box" placeholder="🔍 Buscar convidado...">
 
-            <table id="table-convidados">
+            <!-- Lista de Adultos -->
+            <h2 style="margin-top: 30px; color: #2196f3;">👨‍👩 Adultos (<span id="count-adultos">0</span>)</h2>
+            <table id="table-adultos">
                 <thead>
                     <tr>
                         <th>#</th>
                         <th>Nome</th>
-                        <th>Tipo</th>
                         <th>Status</th>
                         <th>Ações</th>
                     </tr>
                 </thead>
-                <tbody id="tbody-convidados">
+                <tbody id="tbody-adultos">
+                    <tr>
+                        <td colspan="4" style="text-align:center; padding: 40px;">
+                            Carregando dados...
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Lista de Crianças -->
+            <h2 style="margin-top: 40px; color: #e91e63;">👶 Crianças (<span id="count-criancas">0</span>)</h2>
+            <table id="table-criancas">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nome</th>
+                        <th>Idade</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody-criancas">
                     <tr>
                         <td colspan="5" style="text-align:center; padding: 40px;">
                             Carregando dados...
@@ -404,17 +427,21 @@
     <!-- Modal Adicionar Convidado -->
     <div id="modal-add" class="modal">
         <div class="modal-content">
-            <h2>➕ Adicionar Convidado</h2>
+            <h2 id="modal-title">➕ Adicionar Convidado</h2>
             <div class="form-group">
                 <label>Nome:</label>
                 <input type="text" id="input-nome" placeholder="Ex: João Silva">
             </div>
-            <div class="form-group">
+            <div class="form-group" id="group-tipo">
                 <label>Tipo:</label>
-                <select id="input-tipo">
+                <select id="input-tipo" onchange="toggleIdadeField()">
                     <option value="Adulto">Adulto</option>
                     <option value="Criança">Criança</option>
                 </select>
+            </div>
+            <div class="form-group" id="group-idade" style="display: none;">
+                <label>Idade:</label>
+                <input type="text" id="input-idade" placeholder="Ex: 5 anos ou 7 meses">
             </div>
             <div class="form-group">
                 <label>Status:</label>
@@ -463,13 +490,11 @@
             }
         }
 
-        // Renderizar tabela
+        // Renderizar tabelas (separadas por tipo)
         function renderTable() {
-            const tbody = document.getElementById('tbody-convidados');
             const searchTerm = document.getElementById('search-box').value.toLowerCase();
             
-            tbody.innerHTML = '';
-            
+            // Filtrar por busca
             let filteredConvidados = convidados;
             if (searchTerm) {
                 filteredConvidados = convidados.filter(c => 
@@ -477,9 +502,35 @@
                 );
             }
             
-            filteredConvidados.forEach((c, index) => {
+            // Separar adultos e crianças
+            const adultos = filteredConvidados.filter(c => (c.tipo || 'Adulto') === 'Adulto');
+            const criancas = filteredConvidados.filter(c => (c.tipo || 'Adulto') === 'Criança');
+            
+            // Renderizar adultos
+            renderAdultos(adultos);
+            
+            // Renderizar crianças
+            renderCriancas(criancas);
+            
+            // Atualizar contadores
+            document.getElementById('count-adultos').textContent = adultos.length;
+            document.getElementById('count-criancas').textContent = criancas.length;
+            
+            updateStats();
+        }
+        
+        // Renderizar tabela de adultos
+        function renderAdultos(adultos) {
+            const tbody = document.getElementById('tbody-adultos');
+            tbody.innerHTML = '';
+            
+            if (adultos.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding: 40px; color: #999;">Nenhum adulto cadastrado</td></tr>';
+                return;
+            }
+            
+            adultos.forEach((c, index) => {
                 const originalIndex = convidados.indexOf(c);
-                const tipo = c.tipo || 'Adulto';
                 const nome = c.nome || '';
                 const confirmado = (c.confirmado || '').toUpperCase();
                 
@@ -499,7 +550,6 @@
                 row.innerHTML = `
                     <td>${index + 1}</td>
                     <td>${nome}</td>
-                    <td><span class="badge ${tipo.toLowerCase()}">${tipo}</span></td>
                     <td><span class="badge ${statusBadge}">${statusText}</span></td>
                     <td>
                         <div class="actions">
@@ -512,8 +562,53 @@
                 `;
                 tbody.appendChild(row);
             });
+        }
+        
+        // Renderizar tabela de crianças
+        function renderCriancas(criancas) {
+            const tbody = document.getElementById('tbody-criancas');
+            tbody.innerHTML = '';
             
-            updateStats();
+            if (criancas.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="5" style="text-align:center; padding: 40px; color: #999;">Nenhuma criança cadastrada</td></tr>';
+                return;
+            }
+            
+            criancas.forEach((c, index) => {
+                const originalIndex = convidados.indexOf(c);
+                const nome = c.nome || '';
+                const idade = c.idade || '-';
+                const confirmado = (c.confirmado || '').toUpperCase();
+                
+                let statusBadge, statusText;
+                if (confirmado === 'S' || confirmado === 'SIM') {
+                    statusBadge = 'sim';
+                    statusText = '✓ Confirmado';
+                } else if (confirmado === 'N' || confirmado === 'NÃO' || confirmado === 'NAO') {
+                    statusBadge = 'nao';
+                    statusText = '✗ Não confirmado';
+                } else {
+                    statusBadge = 'pendente';
+                    statusText = '⏳ Pendente';
+                }
+                
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${index + 1}</td>
+                    <td>${nome}</td>
+                    <td>${idade}</td>
+                    <td><span class="badge ${statusBadge}">${statusText}</span></td>
+                    <td>
+                        <div class="actions">
+                            <button class="action-btn btn-confirm" onclick="setStatus(${originalIndex}, 'S')" title="Confirmar">✓</button>
+                            <button class="action-btn btn-reject" onclick="setStatus(${originalIndex}, 'N')" title="Rejeitar">✗</button>
+                            <button class="action-btn btn-pending" onclick="setStatus(${originalIndex}, '')" title="Pendente">⏳</button>
+                            <button class="action-btn btn-delete" onclick="deleteConvidado(${originalIndex})" title="Excluir">🗑️</button>
+                        </div>
+                    </td>
+                `;
+                tbody.appendChild(row);
+            });
         }
 
         // Atualizar estatísticas
@@ -553,16 +648,39 @@
         }
 
         // Adicionar convidado
-        function addConvidado() {
+        function addConvidado(tipo) {
             document.getElementById('modal-add').classList.add('active');
             document.getElementById('input-nome').value = '';
-            document.getElementById('input-tipo').value = 'Adulto';
+            document.getElementById('input-tipo').value = tipo || 'Adulto';
+            document.getElementById('input-idade').value = '';
             document.getElementById('input-status').value = '';
+            
+            // Atualizar título do modal
+            const title = tipo === 'Criança' ? '➕ Adicionar Criança' : '➕ Adicionar Adulto';
+            document.getElementById('modal-title').textContent = title;
+            
+            // Mostrar/ocultar campo de idade
+            toggleIdadeField();
+            
+            // Ocultar campo de tipo (já foi pré-selecionado)
+            document.getElementById('group-tipo').style.display = 'none';
+        }
+        
+        function toggleIdadeField() {
+            const tipo = document.getElementById('input-tipo').value;
+            const idadeField = document.getElementById('group-idade');
+            
+            if (tipo === 'Criança') {
+                idadeField.style.display = 'block';
+            } else {
+                idadeField.style.display = 'none';
+            }
         }
 
         function confirmAdd() {
             const nome = document.getElementById('input-nome').value.trim();
             const tipo = document.getElementById('input-tipo').value;
+            const idade = document.getElementById('input-idade').value.trim();
             const status = document.getElementById('input-status').value;
             
             if (!nome) {
@@ -570,11 +688,18 @@
                 return;
             }
             
-            convidados.push({
+            const novoConvidado = {
                 tipo: tipo,
                 nome: nome,
                 confirmado: status
-            });
+            };
+            
+            // Adicionar idade se for criança
+            if (tipo === 'Criança' && idade) {
+                novoConvidado.idade = idade;
+            }
+            
+            convidados.push(novoConvidado);
             
             renderTable();
             closeModal();
@@ -582,6 +707,8 @@
 
         function closeModal() {
             document.getElementById('modal-add').classList.remove('active');
+            // Resetar visibilidade do campo tipo
+            document.getElementById('group-tipo').style.display = 'block';
         }
 
         // Salvar mudanças
