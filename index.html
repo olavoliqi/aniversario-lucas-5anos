@@ -49,6 +49,7 @@
             gap: 10px;
             margin-bottom: 20px;
             justify-content: center;
+            flex-wrap: wrap;
         }
 
         .tab {
@@ -132,6 +133,9 @@
             padding: 15px;
             text-align: left;
             font-weight: bold;
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
 
         td {
@@ -187,6 +191,17 @@
             opacity: 0.8;
         }
 
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #999;
+        }
+
+        .empty-state .icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+
         @media (max-width: 768px) {
             .header h1 {
                 font-size: 1.8em;
@@ -217,7 +232,7 @@
         <div id="convidados-content" class="content">
             <div class="stats">
                 <div class="stat-card">
-                    <div class="number" id="total-convidados">182</div>
+                    <div class="number" id="total-convidados">0</div>
                     <div class="label">Total de Convidados</div>
                 </div>
                 <div class="stat-card">
@@ -245,1100 +260,7 @@
                         <th>Status</th>
                     </tr>
                 </thead>
-                <tbody>
-                    
-                    <tr>
-                        <td>1</td>
-                        <td>Olavo</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge sim">✓ Confirmado</span></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Lucas 4a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge sim">✓ Confirmado</span></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Bia</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge sim">✓ Confirmado</span></td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Laura 1a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge sim">✓ Confirmado</span></td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Amauri</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge sim">✓ Confirmado</span></td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>JG 7m</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge sim">✓ Confirmado</span></td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td>Cristina</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge sim">✓ Confirmado</span></td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td>Virginia 5a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge sim">✓ Confirmado</span></td>
-                    </tr>
-                    <tr>
-                        <td>9</td>
-                        <td>Valentina</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge sim">✓ Confirmado</span></td>
-                    </tr>
-                    <tr>
-                        <td>10</td>
-                        <td>Beatriz 2a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge sim">✓ Confirmado</span></td>
-                    </tr>
-                    <tr>
-                        <td>11</td>
-                        <td>Rodolpho</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge sim">✓ Confirmado</span></td>
-                    </tr>
-                    <tr>
-                        <td>12</td>
-                        <td>Alice 4a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge sim">✓ Confirmado</span></td>
-                    </tr>
-                    <tr>
-                        <td>13</td>
-                        <td>Danilo</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge sim">✓ Confirmado</span></td>
-                    </tr>
-                    <tr>
-                        <td>14</td>
-                        <td>Olivia 9m</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge sim">✓ Confirmado</span></td>
-                    </tr>
-                    <tr>
-                        <td>15</td>
-                        <td>Isadora</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge sim">✓ Confirmado</span></td>
-                    </tr>
-                    <tr>
-                        <td>16</td>
-                        <td>Gustavo 4a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge sim">✓ Confirmado</span></td>
-                    </tr>
-                    <tr>
-                        <td>17</td>
-                        <td>Ana Laura</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>18</td>
-                        <td>Gustavo Junqueira 4a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>19</td>
-                        <td>Guilherme</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>20</td>
-                        <td>Matteo 6a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>21</td>
-                        <td>Jussara</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>22</td>
-                        <td>Lucca 2a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>23</td>
-                        <td>Silvio</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>24</td>
-                        <td>Celina 3a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>25</td>
-                        <td>Gil</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>26</td>
-                        <td>Tomás 3a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>27</td>
-                        <td>Neia</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>28</td>
-                        <td>Luisa Borges 3a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>29</td>
-                        <td>Geraldo</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>30</td>
-                        <td>Beatriz Borges 1a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>31</td>
-                        <td>Wilma</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>32</td>
-                        <td>Rodrigo 9a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>33</td>
-                        <td>Camila</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>34</td>
-                        <td>Mafezinha 3a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>35</td>
-                        <td>Teresa</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>36</td>
-                        <td>Cecilia 3a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>37</td>
-                        <td>Luis</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>38</td>
-                        <td>Maria Luisa 2a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>39</td>
-                        <td>Karen</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>40</td>
-                        <td>Nick 5a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>41</td>
-                        <td>Rau</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>42</td>
-                        <td>Henrique 7a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>43</td>
-                        <td>Augusto</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>44</td>
-                        <td>Rafaela 5a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>45</td>
-                        <td>Germano</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>46</td>
-                        <td>Rafa Rocha 3a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>47</td>
-                        <td>Eliana</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>48</td>
-                        <td>Malu 1a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>49</td>
-                        <td>Fabiano</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>50</td>
-                        <td>Pedro 4a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>51</td>
-                        <td>Neide</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>52</td>
-                        <td>Julia 1a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>53</td>
-                        <td>Telma</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>54</td>
-                        <td>João Pedro 4a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>55</td>
-                        <td>Claudio</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>56</td>
-                        <td>Olivia 3a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>57</td>
-                        <td>Claudia</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>58</td>
-                        <td>Ava 4a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>59</td>
-                        <td>Vitor</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>60</td>
-                        <td>Theo 4a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>61</td>
-                        <td>Eugenia</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>62</td>
-                        <td>Leonardo 4a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>63</td>
-                        <td>Renzo</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>64</td>
-                        <td>Laura CAD 5a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>65</td>
-                        <td>Dani Gobo</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>66</td>
-                        <td>Julia CAD 1a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>67</td>
-                        <td>Chican</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>68</td>
-                        <td>Pipo CAD 4a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>69</td>
-                        <td>Veronica</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>70</td>
-                        <td>Nina 8a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>71</td>
-                        <td>Brown</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>72</td>
-                        <td>Stella 4a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>73</td>
-                        <td>Ticia</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>74</td>
-                        <td>Maitê 7a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>75</td>
-                        <td>Renata Baiana</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>76</td>
-                        <td>Augusto 4a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>77</td>
-                        <td>Mika</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>78</td>
-                        <td>Felipe Prata 5a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge nao">✗ Não confirmado</span></td>
-                    </tr>
-                    <tr>
-                        <td>79</td>
-                        <td>Gui Junqueira</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>80</td>
-                        <td>Gabriel Prata 3a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge nao">✗ Não confirmado</span></td>
-                    </tr>
-                    <tr>
-                        <td>81</td>
-                        <td>Gabi Junqueira</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>82</td>
-                        <td>João Venturoli 3a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>83</td>
-                        <td>Bisão</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>84</td>
-                        <td>Leonardo Serjão 3a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>85</td>
-                        <td>Nathy</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>86</td>
-                        <td>Francisco 6a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>87</td>
-                        <td>Marcelo</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>88</td>
-                        <td>Mathias 4a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>89</td>
-                        <td>Cathy</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>90</td>
-                        <td>Lia 3a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>91</td>
-                        <td>Maurão </td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>92</td>
-                        <td>Manuela 5a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>93</td>
-                        <td>Fabi</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>94</td>
-                        <td>Eduardo 3a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>95</td>
-                        <td>Mendigo</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>96</td>
-                        <td>Laura Mendigo</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>97</td>
-                        <td>Luciana</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>98</td>
-                        <td>Julia Mendigo</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>99</td>
-                        <td>Fejao</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>100</td>
-                        <td>Alice Thompson</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>101</td>
-                        <td>Andrezinho</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>102</td>
-                        <td>Bebe do gordo</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>103</td>
-                        <td>Carol</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>104</td>
-                        <td>Filho Guinho 1 (Pedro)</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>105</td>
-                        <td>Nanis</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>106</td>
-                        <td>Filho Guinho 2</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>107</td>
-                        <td>Mariana</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>108</td>
-                        <td>Filho Buelau 1</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>109</td>
-                        <td>Leo Mattiussi</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>110</td>
-                        <td>Filho Buelau 2</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>111</td>
-                        <td>Malu Mattiussi</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>112</td>
-                        <td>Didi Lambert 5a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>113</td>
-                        <td>Leleo Mattiussi</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>114</td>
-                        <td>Sophia Miranda 4a</td>
-                        <td><span class="badge criança">Criança</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>115</td>
-                        <td>Fefe Mattiussi</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>116</td>
-                        <td>Rodrigo Borges</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>117</td>
-                        <td>Renata</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>118</td>
-                        <td>Guto</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>119</td>
-                        <td>Gabi</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>120</td>
-                        <td>Bocchini</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>121</td>
-                        <td>Alan</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>122</td>
-                        <td>Thompson</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>123</td>
-                        <td>Paula</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>124</td>
-                        <td>Gordo </td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>125</td>
-                        <td>Esposa Gordo</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>126</td>
-                        <td>Pastore</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>127</td>
-                        <td>Esposa Pastore</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>128</td>
-                        <td>Guinho </td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>129</td>
-                        <td>Esposa Guinho</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>130</td>
-                        <td>Andre Buelau</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>131</td>
-                        <td>Esposa Buelau</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>132</td>
-                        <td>Lambert</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>133</td>
-                        <td>Simone</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>134</td>
-                        <td>Luiz Miranda</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>135</td>
-                        <td>Esposa Miranda</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>136</td>
-                        <td>Vinícius</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>137</td>
-                        <td>Julia</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>138</td>
-                        <td>Ana Amoroso</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>139</td>
-                        <td>Marcelo</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>140</td>
-                        <td>Eloy</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>141</td>
-                        <td>Carol P</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>142</td>
-                        <td>Mama</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>143</td>
-                        <td>Roberta</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>144</td>
-                        <td>Marcela (Rafa Rocha)</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>145</td>
-                        <td>Eduardo</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>146</td>
-                        <td>Ana Luiza (Pedro)</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>147</td>
-                        <td>Guilherme</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>148</td>
-                        <td>Nathy (João Pedro)</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>149</td>
-                        <td>Fabio</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>150</td>
-                        <td>Isabela (Olivia)</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>151</td>
-                        <td>Alexandre</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>152</td>
-                        <td>Pai Theo</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>153</td>
-                        <td>Mãe Theo</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>154</td>
-                        <td>Pai Leonardo</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>155</td>
-                        <td>Mãe Leonardo</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>156</td>
-                        <td>Pai Laura CAD</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>157</td>
-                        <td>Mãe Laura CAD</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>158</td>
-                        <td>Pai Pipo CAD</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>159</td>
-                        <td>Mãe Pipo CAD</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>160</td>
-                        <td>Martina</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>161</td>
-                        <td>Marido Martina</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>162</td>
-                        <td>Pai Augusto</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>163</td>
-                        <td>Mãe Augusto</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>164</td>
-                        <td>Mafê</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>165</td>
-                        <td>Vitória</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>166</td>
-                        <td>Diego</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>167</td>
-                        <td>Ana</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>168</td>
-                        <td>Nathalia Prata</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge nao">✗ Não confirmado</span></td>
-                    </tr>
-                    <tr>
-                        <td>169</td>
-                        <td>Bruno Prata</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge nao">✗ Não confirmado</span></td>
-                    </tr>
-                    <tr>
-                        <td>170</td>
-                        <td>Carol Venturoli</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>171</td>
-                        <td>Leitinho</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>172</td>
-                        <td>Deia</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>173</td>
-                        <td>Fernando</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>174</td>
-                        <td>Serjão</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>175</td>
-                        <td>Aninha </td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>176</td>
-                        <td>Scylla</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>177</td>
-                        <td>Flavio</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>178</td>
-                        <td>Barbara</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>179</td>
-                        <td>Renan</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>180</td>
-                        <td>Debora</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>181</td>
-                        <td>Mari Torres</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
-                    <tr>
-                        <td>182</td>
-                        <td>Igor</td>
-                        <td><span class="badge adulto">Adulto</span></td>
-                        <td><span class="badge pendente">⏳ Pendente</span></td>
-                    </tr>
+                <tbody id="tbody-convidados">
                 </tbody>
             </table>
         </div>
@@ -1361,45 +283,996 @@
 
             <input type="text" id="search-fornecedores" class="search-box" placeholder="🔍 Buscar fornecedor...">
 
-            <table id="table-fornecedores">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Fornecedor</th>
-                        <th>Serviço</th>
-                        <th>Valor</th>
-                        <th>Escopo</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    
-                    <tr>
-                        <td>1</td>
-                        <td>Exemplo Buffet</td>
-                        <td>Comida e bebida</td>
-                        <td>R$ 5.000</td>
-                        <td>Buffet completo para 100 pessoas</td>
-                        <td><span class="badge sim">✓ Confirmado</span></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Exemplo Decoração</td>
-                        <td>Decoração</td>
-                        <td>R$ 2.000</td>
-                        <td>Decoração tema festa infantil</td>
-                        <td><span class="badge nao">✗ Pendente</span></td>
-                    </tr>
-                </tbody>
-            </table>
+            <div id="fornecedores-list">
+                <div class="empty-state">
+                    <div class="icon">📋</div>
+                    <h3>Nenhum fornecedor cadastrado ainda</h3>
+                    <p>Entre em contato para adicionar fornecedores à lista</p>
+                </div>
+            </div>
         </div>
 
         <div class="footer">
-            <p>🦞 Atualizado automaticamente a cada hora • Última atualização: <span id="last-update">30/04/2026 às 01:01</span></p>
+            <p>🦞 Atualizado em: 30/04/2026</p>
         </div>
     </div>
 
     <script>
+        // DADOS EMBUTIDOS
+        const convidados = [
+        {
+                "tipo": "Adulto",
+                "nome": "Olavo",
+                "confirmado": "S"
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Lucas 4a",
+                "confirmado": "S"
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Bia",
+                "confirmado": "S"
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Laura 1a",
+                "confirmado": "S"
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Amauri",
+                "confirmado": "S"
+        },
+        {
+                "tipo": "Criança",
+                "nome": "JG 7m",
+                "confirmado": "S"
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Cristina",
+                "confirmado": "S"
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Virginia 5a",
+                "confirmado": "S"
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Valentina",
+                "confirmado": "S"
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Beatriz 2a",
+                "confirmado": "S"
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Rodolpho",
+                "confirmado": "S"
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Alice 4a",
+                "confirmado": "S"
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Danilo",
+                "confirmado": "S"
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Olivia 9m",
+                "confirmado": "S"
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Isadora",
+                "confirmado": "S"
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Gustavo 4a",
+                "confirmado": "S"
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Ana Laura",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Gustavo Junqueira 4a",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Guilherme",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Matteo 6a",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Jussara",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Lucca 2a",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Silvio",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Celina 3a",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Gil",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Tomás 3a",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Neia",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Luisa Borges 3a",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Geraldo",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Beatriz Borges 1a",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Wilma",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Rodrigo 9a",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Camila",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Mafezinha 3a",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Teresa",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Cecilia 3a",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Luis",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Maria Luisa 2a",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Karen",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Nick 5a",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Rau",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Henrique 7a",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Augusto",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Rafaela 5a",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Germano",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Rafa Rocha 3a",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Eliana",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Malu 1a",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Fabiano",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Pedro 4a",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Neide",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Julia 1a",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Telma",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "João Pedro 4a",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Claudio",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Olivia 3a",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Claudia",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Ava 4a",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Vitor",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Theo 4a",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Eugenia",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Leonardo 4a",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Renzo",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Laura CAD 5a",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Dani Gobo",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Julia CAD 1a",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Chican",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Pipo CAD 4a",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Veronica",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Nina 8a",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Brown",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Stella 4a",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Ticia",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Maitê 7a",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Renata Baiana",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Augusto 4a",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Mika",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Felipe Prata 5a",
+                "confirmado": "N"
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Gui Junqueira",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Gabriel Prata 3a",
+                "confirmado": "N"
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Gabi Junqueira",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "João Venturoli 3a",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Bisão",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Leonardo Serjão 3a",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Nathy",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Francisco 6a",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Marcelo",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Mathias 4a",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Cathy",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Lia 3a",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Maurão ",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Manuela 5a",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Fabi",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Eduardo 3a",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Mendigo",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Laura Mendigo",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Luciana",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Julia Mendigo",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Fejao",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Alice Thompson",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Andrezinho",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Bebe do gordo",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Carol",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Filho Guinho 1 (Pedro)",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Nanis",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Filho Guinho 2",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Mariana",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Filho Buelau 1",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Leo Mattiussi",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Filho Buelau 2",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Malu Mattiussi",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Didi Lambert 5a",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Leleo Mattiussi",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Criança",
+                "nome": "Sophia Miranda 4a",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Fefe Mattiussi",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Rodrigo Borges",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Renata",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Guto",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Gabi",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Bocchini",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Alan",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Thompson",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Paula",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Gordo ",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Esposa Gordo",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Pastore",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Esposa Pastore",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Guinho ",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Esposa Guinho",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Andre Buelau",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Esposa Buelau",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Lambert",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Simone",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Luiz Miranda",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Esposa Miranda",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Vinícius",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Julia",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Ana Amoroso",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Marcelo",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Eloy",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Carol P",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Mama",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Roberta",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Marcela (Rafa Rocha)",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Eduardo",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Ana Luiza (Pedro)",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Guilherme",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Nathy (João Pedro)",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Fabio",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Isabela (Olivia)",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Alexandre",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Pai Theo",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Mãe Theo",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Pai Leonardo",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Mãe Leonardo",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Pai Laura CAD",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Mãe Laura CAD",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Pai Pipo CAD",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Mãe Pipo CAD",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Martina",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Marido Martina",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Pai Augusto",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Mãe Augusto",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Mafê",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Vitória",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Diego",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Ana",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Nathalia Prata",
+                "confirmado": "N"
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Bruno Prata",
+                "confirmado": "N"
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Carol Venturoli",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Leitinho",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Deia",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Fernando",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Serjão",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Aninha ",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Scylla",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Flavio",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Barbara",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Renan",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Debora",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Mari Torres",
+                "confirmado": ""
+        },
+        {
+                "tipo": "Adulto",
+                "nome": "Igor",
+                "confirmado": ""
+        }
+];
+
+        const fornecedores = [];
+
+
+        // Renderizar convidados
+        function renderConvidados() {
+            const tbody = document.getElementById('tbody-convidados');
+            tbody.innerHTML = '';
+
+            convidados.forEach((c, index) => {
+                const tipo = c.tipo || '';
+                const nome = c.nome || '';
+                const confirmado = (c.confirmado || '').toUpperCase();
+
+                // Badge de tipo
+                const tipoBadge = `<span class="badge ${tipo.toLowerCase()}">${tipo}</span>`;
+
+                // Badge de status
+                let statusBadge;
+                if (confirmado === 'S' || confirmado === 'SIM') {
+                    statusBadge = '<span class="badge sim">✓ Confirmado</span>';
+                } else if (confirmado === 'N' || confirmado === 'NÃO' || confirmado === 'NAO') {
+                    statusBadge = '<span class="badge nao">✗ Não confirmado</span>';
+                } else {
+                    statusBadge = '<span class="badge pendente">⏳ Pendente</span>';
+                }
+
+                const row = `
+                    <tr>
+                        <td>${index + 1}</td>
+                        <td>${nome}</td>
+                        <td>${tipoBadge}</td>
+                        <td>${statusBadge}</td>
+                    </tr>
+                `;
+                tbody.innerHTML += row;
+            });
+
+            updateStats();
+        }
+
+        // Atualizar estatísticas
+        function updateStats() {
+            const total = convidados.length;
+            let confirmados = 0;
+
+            convidados.forEach(c => {
+                const status = (c.confirmado || '').toUpperCase();
+                if (status === 'S' || status === 'SIM') {
+                    confirmados++;
+                }
+            });
+
+            const pendentes = total - confirmados;
+            const percentual = total > 0 ? Math.round((confirmados / total) * 100) : 0;
+
+            document.getElementById('total-convidados').textContent = total;
+            document.getElementById('total-confirmados').textContent = confirmados;
+            document.getElementById('total-pendentes').textContent = pendentes;
+            document.getElementById('percentual-confirmados').textContent = percentual + '%';
+        }
+
         // Navegação de abas
         function showTab(tab) {
             const tabs = document.querySelectorAll('.tab');
@@ -1423,39 +1296,10 @@
             });
         });
 
-        // Busca em fornecedores
-        document.getElementById('search-fornecedores').addEventListener('input', function(e) {
-            const search = e.target.value.toLowerCase();
-            const rows = document.querySelectorAll('#table-fornecedores tbody tr');
-
-            rows.forEach(row => {
-                const text = row.textContent.toLowerCase();
-                row.style.display = text.includes(search) ? '' : 'none';
-            });
+        // Inicializar
+        window.addEventListener('DOMContentLoaded', () => {
+            renderConvidados();
         });
-
-        // Atualizar estatísticas
-        function updateStats() {
-            const rows = document.querySelectorAll('#table-convidados tbody tr');
-            let confirmados = 0;
-            let total = rows.length;
-
-            rows.forEach(row => {
-                const status = row.querySelector('.badge.sim');
-                if (status) confirmados++;
-            });
-
-            const pendentes = total - confirmados;
-            const percentual = total > 0 ? Math.round((confirmados / total) * 100) : 0;
-
-            document.getElementById('total-convidados').textContent = total;
-            document.getElementById('total-confirmados').textContent = confirmados;
-            document.getElementById('total-pendentes').textContent = pendentes;
-            document.getElementById('percentual-confirmados').textContent = percentual + '%';
-        }
-
-        // Executar ao carregar a página
-        window.addEventListener('DOMContentLoaded', updateStats);
     </script>
 </body>
 </html>
