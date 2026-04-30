@@ -1,0 +1,23 @@
+{
+  "name": "aniversario-lucas-5anos",
+  "version": "1.0.0",
+  "description": "Site de gerenciamento de convidados para o aniversário do Lucas.",
+  "main": "webhook-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olavoliqi/aniversario-lucas-5anos.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olavoliqi/aniversario-lucas-5anos/issues"
+  },
+  "homepage": "https://github.com/olavoliqi/aniversario-lucas-5anos#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
